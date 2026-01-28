@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Video Cover - myAgentSkills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #141413;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      width: 1920px;
+      height: 1080px;
+      display: flex;
+      position: relative;
+    }
+
+    /* Left side - Text content */
+    .left-side {
+      width: 55%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 80px;
+      padding-right: 40px;
+    }
+
+    .headline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .line1 {
+      font-size: 56px;
+      font-weight: 700;
+      color: #FAF9F5;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .line2 {
+      font-size: 56px;
+      font-weight: 700;
+      color: #D97757;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    /* Bottom left branding */
+    .branding {
+      position: absolute;
+      left: 48px;
+      bottom: 48px;
+    }
+
+    .brand-name {
+      font-size: 24px;
+      font-weight: 600;
+      color: #D97757;
+      margin-bottom: 4px;
+    }
+
+    .brand-tagline {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(250, 249, 245, 0.5);
+    }
+
+    /* Right side - Photo */
+    .right-side {
+      width: 45%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo {
+      position: absolute;
+      right: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+      object-position: center top;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left side - Text content -->
+    <div class="left-side">
+      <div class="headline">
+        <div class="line1">La IA que usas es inteligente.</div>
+        <div class="line2">Pero no conoce tu negocio.</div>
+      </div>
+    </div>
+
+    <!-- Right side - Photo -->
+    <div class="right-side">
+      <img src="src/images/moshe.jpg" alt="Portrait" class="photo">
+    </div>
+
+    <!-- Bottom left branding -->
+    <div class="branding">
+      <div class="brand-name">myAgentSkills</div>
+      <div class="brand-tagline">from Agentman</div>
+    </div>
+  </div>
+</body>
+</html>
