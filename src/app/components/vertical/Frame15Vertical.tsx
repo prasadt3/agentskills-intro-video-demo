@@ -13,39 +13,15 @@ export function Frame15Vertical() {
         overflow: 'hidden',
       }}
     >
-      {/* Top - Photo */}
-      <motion.div
-        style={{
-          width: '100%',
-          height: '45%',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-      >
-        <img
-          src="/src/images/moshe.jpg"
-          alt="Portrait"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center top',
-          }}
-        />
-      </motion.div>
-
-      {/* Bottom - Text content */}
+      {/* Top - Text content */}
       <div
         style={{
           width: '100%',
           height: '55%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
-          padding: '32px 24px',
+          justifyContent: 'flex-start',
+          padding: '80px 24px 32px 24px',
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -59,7 +35,7 @@ export function Frame15Vertical() {
             }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+            transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
           >
             La IA que usas es inteligente.
           </motion.div>
@@ -73,7 +49,7 @@ export function Frame15Vertical() {
             }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
+            transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
           >
             Pero no conoce tu negocio.
           </motion.div>
@@ -86,7 +62,7 @@ export function Frame15Vertical() {
           }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 0.5, delay: 0.6, ease: 'easeOut' }}
         >
           <div
             style={{
@@ -109,6 +85,30 @@ export function Frame15Vertical() {
           </div>
         </motion.div>
       </div>
+
+      {/* Bottom - Photo */}
+      <motion.div
+        style={{
+          width: '100%',
+          height: '45%',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
+      >
+        <img
+          src="/src/images/moshe.jpg"
+          alt="Portrait"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center top',
+          }}
+        />
+      </motion.div>
     </div>
   );
 }

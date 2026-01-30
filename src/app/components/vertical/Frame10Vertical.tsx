@@ -1,41 +1,47 @@
 import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
 
 export function Frame10Vertical() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center px-8">
-      {/* Logo */}
+    <div className="w-full h-full flex flex-col items-center justify-center gap-12 px-8">
+      {/* Logo lockup */}
       <motion.div
-        className="text-[42px] tracking-[-0.02em] mb-6"
-        style={{ fontWeight: 700, color: '#D97757' }}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+        className="flex flex-col items-center gap-2"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
       >
-        myAgentSkills
+        <p className="text-[36px]" style={{ color: '#D97757', fontWeight: 700 }}>
+          myAgentSkills
+        </p>
+        <p className="text-[14px]" style={{ color: '#FAF9F5', opacity: 0.6, fontWeight: 400 }}>
+          from Agentman
+        </p>
       </motion.div>
 
-      {/* Tagline */}
-      <motion.div
-        className="text-[18px] tracking-[-0.01em] text-center"
-        style={{ fontWeight: 400, color: 'rgba(250, 249, 245, 0.6)' }}
-        initial={{ opacity: 0, y: 10 }}
+      {/* URL */}
+      <motion.p
+        className="text-[42px] tracking-[-0.01em]"
+        style={{ color: '#FAF9F5', fontWeight: 600 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
       >
-        from Agentman
-      </motion.div>
+        myagentskills.ai
+      </motion.p>
 
       {/* CTA */}
       <motion.div
-        className="mt-16 px-8 py-4 rounded-full"
-        style={{ backgroundColor: '#D97757' }}
+        className="flex items-center gap-2 px-5 py-3 rounded-lg border-2"
+        style={{ borderColor: '#D97757' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.8, ease: 'easeOut' }}
+        transition={{ duration: 0.5, delay: 0.6, ease: 'easeOut' }}
       >
-        <span className="text-[18px]" style={{ color: '#FAF9F5', fontWeight: 600 }}>
-          Get Started Free
+        <span className="text-[20px]" style={{ color: '#D97757', fontWeight: 500 }}>
+          Free to start
         </span>
+        <ArrowRight size={20} style={{ color: '#D97757' }} />
       </motion.div>
     </div>
   );

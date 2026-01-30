@@ -20,8 +20,8 @@ export function Frame7Vertical() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
       >
-        <span style={{ color: '#FAF9F5' }}>Use it </span>
-        <span style={{ color: '#D97757' }}>everywhere.</span>
+        <span style={{ color: '#FAF9F5' }}>Update it in </span>
+        <span style={{ color: '#D97757' }}>one place.</span>
       </motion.div>
     </div>
   );

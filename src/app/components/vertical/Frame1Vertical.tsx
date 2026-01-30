@@ -53,9 +53,9 @@ export function Frame1Vertical() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center">
+    <div className="w-full h-full flex flex-col items-center justify-start pt-[15%]">
       {/* Network visualization */}
-      <svg width="700" height="700" className="mb-8">
+      <svg width="700" height="600" className="mb-8">
         {/* Draw connections */}
         {connections.map((conn, idx) => (
           <motion.line

@@ -1,29 +1,37 @@
 import { motion } from 'motion/react';
+import { BookOpen, Wrench, Users } from 'lucide-react';
 
 export function Frame8Vertical() {
+  const features = [
+    { icon: BookOpen, text: '60+ production-ready skills' },
+    { icon: Wrench, text: 'Clone and customize' },
+    { icon: Users, text: 'Maintainable by your frontline team' },
+  ];
+
   return (
     <div className="w-full h-full flex flex-col items-center justify-center px-8">
-      {/* Text lines stacked */}
-      <div className="flex flex-col items-center gap-4">
-        <motion.div
-          className="text-[32px] tracking-[-0.02em] text-center"
-          style={{ fontWeight: 500, color: '#FAF9F5' }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
-        >
-          Introducing
-        </motion.div>
-
-        <motion.div
-          className="text-[48px] tracking-[-0.02em] text-center"
-          style={{ fontWeight: 700, color: '#D97757' }}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.5, ease: 'easeOut' }}
-        >
-          myAgentSkills
-        </motion.div>
+      <div className="flex flex-col gap-6">
+        {features.map((feature, idx) => (
+          <motion.div
+            key={idx}
+            className="flex items-center gap-4"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: 0.2 + idx * 0.15, ease: 'easeOut' }}
+          >
+            <feature.icon
+              size={20}
+              strokeWidth={2}
+              style={{ color: '#D97757' }}
+            />
+            <span
+              className="text-[24px]"
+              style={{ color: '#FAF9F5', fontWeight: 500 }}
+            >
+              {feature.text}
+            </span>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
